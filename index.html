@@ -1,13 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
 
-    <title>Rocket Academy!</title>
+    <title>Jia Hao's Portfolio Site</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <nav id="navbar">
+      <ul id="navlist">
+        <li class="nav-element">
+          <a href="#welcome-section" class="nav-link">About</a>
+        </li>
+        <li class="nav-element">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-element">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="welcome-section">
+      <h1 id="intro-text">Hi! My name is <span id="name">Jia Hao</span>.</h1>
+      <p id="description-text">An aspiring software engineer</p>
+      <p>
+        I am currently undergoing a 6-month bootcamp to upskill myself.<br />In
+        my free time, I like to read, run, watch anime, and dabble in the stock
+        market.
+      </p>
+      <p>Skills: JavaScript, HTML, CSS, Node.js</p>
+    </div>
+    <div id="projects">
+      <div class="project-tile">
+        <a
+          class="project-tile-href"
+          href="https://lim-jiahao.github.io/video-poker-bootcamp/"
+          target="_blank"
+        >
+          <img src="videopoker.png" class="project-image" />
+          <p class="project-name">Video Poker</p>
+        </a>
+      </div>
+
+      <div class="project-tile">
+        <a
+          class="project-tile-href"
+          href="https://lim-jiahao.github.io/basics-blackjack/"
+          target="_blank"
+        >
+          <img src="blackjack.png" class="project-image" />
+          <p class="project-name">Blackjack</p>
+        </a>
+      </div>
+
+      <div class="project-tile">
+        <a
+          class="project-tile-href"
+          href="https://lim-jiahao.github.io/match-game-bootcamp/"
+          target="_blank"
+        >
+          <img src="match.png" class="project-image" />
+          <p class="project-name">Match Game</p>
+        </a>
+      </div>
+
+      <div class="project-tile">
+        <a class="project-tile-href" href="#">
+          <img src="https://picsum.photos/250" class="project-image" />
+          <p class="project-name">Lorem ipsum</p>
+        </a>
+      </div>
+
+      <div class="project-tile">
+        <a class="project-tile-href" href="#">
+          <img src="https://picsum.photos/250" class="project-image" />
+          <p class="project-name">Lorem ipsum</p>
+        </a>
+      </div>
+
+      <div class="project-tile">
+        <a class="project-tile-href" href="#">
+          <img src="https://picsum.photos/250" class="project-image" />
+          <p class="project-name">Lorem ipsum</p>
+        </a>
+      </div>
+    </div>
+    <div id="contact">
+      <h1 id="collab-text">Feel free to contact me!</h1>
+      <p>Excited to hear about exciting opportunities or projects</p>
+      <div id="contact-links">
+        <div>
+          <a
+            href="https://github.com/lim-jiahao"
+            target="_blank"
+            id="profile-link"
+            class="contact-link"
+            >Github</a
+          >
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/lim-jia-hao/"
+            target="_blank"
+            id="profile-link"
+            class="contact-link"
+            >LinkedIn</a
+          >
+        </div>
+        <div>
+          <a
+            href="mailto:lim.jiahaoo@gmail.com"
+            target="_blank"
+            id="profile-link"
+            class="contact-link"
+            >Email</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
 </html>

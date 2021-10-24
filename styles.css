@@ -1,3 +1,143 @@
-body{
-  background-color:pink;
+#navbar {
+  background: crimson;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#navlist {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-element {
+  /* display: inline; */
+  padding: 10px;
+  height: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-element:hover {
+  background: darkslateblue;
+}
+
+#welcome-section {
+  background: #444444;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#intro-text {
+  margin: 0;
+}
+
+#name {
+  animation-name: change-colour;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change-colour {
+  50% {
+    color: crimson;
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#description-text {
+  color: crimson;
+  font-size: 20px;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: center;
+  background: darkslateblue;
+}
+
+.project-tile {
+  width: 25%;
+  background: #444444;
+  margin: 15px;
+}
+
+.project-tile-href {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-image {
+  width: 100%;
+}
+
+#contact {
+  background: #444444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 0 10px;
+}
+
+#collab-text {
+  margin-bottom: 0;
+}
+
+#contact-links {
+  display: flex;
+}
+
+.contact-link {
+  margin: 0px 10px;
+  position: relative;
+  font-weight: bold;
+  color: crimson;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  top: 2px;
+}
+
+@media (max-width: 800px) {
+  .project-tile {
+    width: 40%;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-tile {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
 }
