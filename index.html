@@ -37,6 +37,15 @@
   </head>
   <body>
     <h1>Test Webpage For Pixel Fires and Sample Pixel Catalog Upload</h1>
+
+	<label for="eventid">Event ID</label>
+
+	<input
+	  type="text"
+	  id="eventid"
+	  name="eventid"
+	  required
+	/>
     <button id="search">Search</button>
     <button id="viewcategory">ViewCategory</button>
     <button id="viewcontent">ViewContent</button>
@@ -57,6 +66,7 @@
 	  const pageviewButton = document.getElementById('pageview');	  
 	  const catalogvcButton = document.getElementById('catalogvc');	  
 	  const belltest = document.getElementById('belltest');	  
+	  const eventIDInput = document.getElementById('eventid');
 	    
 	  catalogvcButton.addEventListener('click', event => {
 		  fbq('track', 'AddToCart', {
@@ -119,7 +129,9 @@
 	  });
 	  
 	  deduptestButton.addEventListener('click', event => {
-		  fbq('track', 'DedupTest', {}, {eventID: '123'})
+		  const eventID = eventIDInput.value;
+		  console.log(eventID);
+		  fbq('track', 'DedupTest', {}, {eventID: eventID })
 	  });
 	  
 	  pageviewButton.addEventListener('click', event => {
