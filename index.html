@@ -60,8 +60,9 @@
     <button id="custom123">custom123</button>
     <button id="duduptest">deduptest</button>
     <button id="pageview">pageview</button>
+	<button id="purchase">purchase</button>
     <button id="catalogvc">catalogvcSingleNoArray</button>
-    <button id="belltest">catalogvcSingleNoArray</button>
+
   </body>
   <script>
 	  const searchButton = document.getElementById('search');
@@ -75,25 +76,6 @@
 	  const belltest = document.getElementById('belltest');	  
 	  const eventNameInput = document.getElementById('eventname');
 	  const eventIDInput = document.getElementById('eventid');
-	    
-	  catalogvcButton.addEventListener('click', event => {
-		  fbq('track', 'AddToCart', {
-			  value: .5,
-   			  currency: 'USD',
-    			  content_type: 'product', // required property
-    			  content_ids: '201'
-		  });
-	  }); 
-	  
-	  
-	  belltest.addEventListener('click', event => {
-		  fbq('track', 'AddToCart', {
-			  value: .5,
-   			  currency: 'USD',
-    			  content_type: 'product', // required property
-    			  content_ids: "201"
-		  });
-	  }); 
 	    
 	  searchButton.addEventListener('click', event => {
 		  fbq('track', 'Search', {
@@ -114,7 +96,7 @@
 	    
 	  viewContentButton.addEventListener('click', event => {
 		  fbq('track', 'ViewContent', {
-			  content_ids: ['1234'],
+			  content_ids: ['FB_product_1234', 'FB_product_1235', 'FB_product_1236', 'FB_product_1237', 'FB_product_1238'],
 			  content_type: 'product',
 			  value: 0.50,
 			  currency: 'USD'
@@ -123,7 +105,7 @@
 	    
 	  addToCartButton.addEventListener('click', event => {
 		  fbq('track', 'AddToCart', {
-			  content_ids: ['1234', '1853', '9386'],
+			  content_ids: ['FB_product_1234', 'FB_product_1235', 'FB_product_1236', 'FB_product_1237', 'FB_product_1238'],
 			  content_type: 'product',
 			  value: 3.50,
 			  currency: 'USD'
@@ -147,6 +129,24 @@
 		  fbq('track', 'PageView2', {'customdata': 'customdata'});
 		  console.log("firing subsequent pageview");
 	  });
+
+	  purchase.addEventListener('click', event => {
+		  fbq('track', 'AddToCart', {
+			  value: .5,
+   			  currency: 'USD',
+			  content_type: 'product', // required property
+			  content_ids: ['FB_product_1234', 'FB_product_1235', 'FB_product_1236', 'FB_product_1237', 'FB_product_1238'],
+		  });
+	  }); 
+	  
+	  catalogvcButton.addEventListener('click', event => {
+		  fbq('track', 'AddToCart', {
+			  value: .5,
+   			  currency: 'USD',
+    			  content_type: 'product', // required property
+    			  content_ids: '201'
+		  });
+	  }); 
 	  
     </script>
 </html>
